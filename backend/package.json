@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "tsx watch src/server.ts"
   },
+    "prisma": {
+    "seed": "node prisma/seed.ts"
+  },
   "author": "Fullstack e Análise de Dados",
   "license": "ISC",
   "type": "commonjs",
