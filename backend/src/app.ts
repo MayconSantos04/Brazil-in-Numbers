@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dashboardRouter from "./routes/dashboards"
 import statesRouter from "./routes/states"
+import regionRouter from "./routes/index"
 import { errorHandling } from "./middlewares/error-handling";
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use("/api", statesRouter)
 app.use("/api", dashboardRouter)
+app.use("/api", regionRouter)
 
 app.use(errorHandling);
 
